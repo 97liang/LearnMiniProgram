@@ -1,2 +1,4 @@
 <!--pages/home/home.wxml-->
 <text>Hello World</text>
+
+<view>不要回答！</view>
