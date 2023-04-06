@@ -1,0 +1,9 @@
+<!-- 伪类选择器 -->
+<view hover-class="active">点击</view>
+
+<!-- 阻止事件冒泡 -->
+<view class="box1" hover-class="box1active">
+  <view class="box2">
+    <view hover-stop-propagation hover-class="st_active">点击</view>
+  </view>
+</view>

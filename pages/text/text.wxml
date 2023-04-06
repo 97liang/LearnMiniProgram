@@ -1,0 +1,10 @@
+<!--pages/text/text.wxml-->
+<text>pages/text/text.wxml</text>
+
+<!-- 长按文本选中 -->
+<text user-select="true">qq2wqw\n</text>
+
+<!-- 文本空格的大小 -->
+<text space="nbsp">hello world\n</text>
+<text space="ensp">hello world\n</text>
+<text space="emsp">hello world\n</text>

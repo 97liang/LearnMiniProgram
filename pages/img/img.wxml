@@ -1,0 +1,12 @@
+<!-- 相对路径 -->
+<image src="../../assets/test/red.png" />
+
+<!-- 选择图片 -->
+<button bindtap="handleChooseAlbum">选择图片</button>
+<image src="{{imagePath}}" />
+
+<!-- 图片懒加载 lazy-load -->
+<image wx:for="{{10}}" src="../../assets/test/red.png" lazy-load />
+
+<!-- 长按图片显示识别小程序码菜单 show-menu-by-longpress -->
+<image src="../../assets/test/red.png" show-menu-by-longpress />

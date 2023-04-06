@@ -1,0 +1,24 @@
+.container1 {
+  height: 100px;
+  white-space: nowrap;
+  margin: 10px;
+}
+
+.box1 {
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+  display: inline-block;
+}
+
+.container2 {
+  height: 100px;
+  width: 50px;
+}
+
+.box2 {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  background-color: chartreuse;
+}
