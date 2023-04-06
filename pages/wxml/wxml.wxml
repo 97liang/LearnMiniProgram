@@ -1,0 +1,33 @@
+<!-- 插值语法 Mustache -->
+<view>
+  {{message +' '+ firstname +lastname}}
+  {{age >=18 ?'未成年':'成年人'}}
+</view>
+<view>
+  {{nowtime}}
+</view>
+
+<button size="mini" bindtap="handleSwitch">按钮</button>
+<view class="box {{isActive ? 'active' : ''}} ">哈哈哈</view>
+<!-- 条件判断 wx:if wx:elif wx:else -->
+
+<!-- hidden属性 只是设置为display：none 组件还存在，需要频繁切换选择hidden-->
+<!-- wx：if组件不存在， -->
+<view hidden='{{ false}}'>
+  ok
+</view>
+
+<!-- wx:for  block：包装元素，不进行渲染，只接受控制属性 -->
+<!-- 起别名 wx:for-item='movie' 用于嵌套渲染-->
+<!-- key的作用 更加高效的更新虚拟dom，且必须要唯一标识(letters里不能有多个一样的属性)-->
+<view class="container">
+  <view wx:for="{{letters}}" wx:key="item">
+    {{item}}
+  </view>
+</view>
+
+<!-- template 为了代码的复用 -->
+<!-- import不可递归导入   include拷贝除了template 和 wxs之外的所有元素 -->
+<import src="/wxml/tempate" />
+<template is="content" data="{{btnText:'按钮',viewContent:'哈哈哈'}}" />
+

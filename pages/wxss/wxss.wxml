@@ -1,0 +1,8 @@
+<!-- 内联样式 -->
+<view style="background-color: aqua;">
+  red
+</view>
+
+<!-- rpx 适配尺寸 -->
+
+<!-- 样式导入 @import-->

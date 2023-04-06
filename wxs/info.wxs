@@ -1,0 +1,14 @@
+
+var message = 'ok';
+var name = 'liang';
+
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+module.exports = {
+  message: message,
+  name: name,
+  sum: sum
+}
+

@@ -1,0 +1,25 @@
+<!-- wxs的定义方式 -->
+<!--   页面定义
+  <wxs module="info">
+  var message = 'ok';
+  var name = 'liang';
+
+  function sum(num1, num2) {
+    return num1 + num2;
+  }
+  module.exports = {
+    message: message,
+    name: name,
+    sum: sum
+  }
+</wxs>
+<view>
+  {{info.message}}
+</view> -->
+
+<!-- 单独写到一个文件内 -->
+<!-- 导出不能用绝对路径 -->
+<wxs src="../../wxs/info.wxs" module="info" />
+<view>
+  {{info.message}}
+</view>

@@ -1,0 +1,6 @@
+.box {
+  color: #333;
+}
+.active{
+  color: red;
+}
