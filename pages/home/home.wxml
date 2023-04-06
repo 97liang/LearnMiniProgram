@@ -1,2 +1,18 @@
-<!--pages/home/home.wxml-->
-<text>Hello World</text>
+<view bind:longpress="handleLongpress">
+  hello world
+</view>
+
+<!-- touches表示触碰的结果  changedTouches表示触碰的过程变化次数 -->
+<!--    
+  target产生事件的event  currentTarget触发事件的event 
+          事件冒泡导致在外层容器的事件经内层容器触发
+-->
+
+<!-- 事件的传参 -->
+<view>
+  <button wx:for="{{titles}}" wx:key="item" bindtap="handleBtn" data-index="{{index}}" data-item="{{item}}">{{item}}</button>
+</view>
+
+<!-- 事件的捕获与事件冒泡 -->
+<!-- bind：一层层传递 -->
+<!-- catch：阻止事件的进一步传递 -->

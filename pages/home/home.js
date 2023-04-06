@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    titles: ['鞋子', '帽子', '衣服']
+  },
+  handleLongpress() {
+    console.log('ok');
+  },
+  handleBtn(event) {
+    console.log(event);
+    const dataSet = event.currentTarget.dataset
+    const item = dataSet.item
+    const index = dataSet.index
+    console.log(item + index);
   },
 
   /**
