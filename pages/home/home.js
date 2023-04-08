@@ -1,66 +1,55 @@
-// pages/home/home.js
-Page({
+import request from '../../service/network'
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
+    //原生的网络请求
+    this.get_data_origin()
 
+    //使用分装的request发送网络请求
+    request({
+      url: 'http://123.207.32.32:8000/recommend'
+    }).then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  get_data_origin() {
+    // 1.发送简单的get请求
+    // wx.request({
+    //   url: 'http://123.207.32.32:8000/recommend',
+    //   success: (res => {
+    //     console.log(res);
+    //   })
+    // })
+    // 2.get请求，但是携带参数
+    // wx.request({
+    //   url: 'http://123.207.32.32:8000/home/data',
+    //   data: {
+    //     type: 'sell',
+    //     page: 1
+    //   },
+    //   success: (res => {
+    //     console.log(res);
+    //   })
+    // })
+    // 3.post请求，且携带参数
+    // wx.request({
+    //   url: 'http://httpbin.org/post',
+    //   method: 'post',
+    //   data: {
+    //     name: 'liang',
+    //     age: 19
+    //   },
+    //   success: (res => {
+    //     console.log(res);
+    //   }),
+    //   fail: (err => {
+    //     console.log(err);
+    //   })
+    // })
   }
 })
