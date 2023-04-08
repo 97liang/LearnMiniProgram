@@ -1,0 +1,4 @@
+<view>
+  {{message}}
+</view>
+<button>check</button>

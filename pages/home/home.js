@@ -5,9 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    counter: 0
   },
-
+  handleIncrement(event) {
+    console.log(event);
+    this.setData({
+      counter: this.data.counter + 1
+    })
+  },
+  handleTabCLick(event) {
+    console.log(event);
+  },
+  handleSel() {
+    const my_sel = this.selectComponent('#sel-id')
+    my_sel.incrementCounter(10)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

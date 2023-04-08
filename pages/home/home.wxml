@@ -1,2 +1,31 @@
-<!--pages/home/home.wxml-->
-<text>Hello World</text>
+<!-- <text class="title">Hello World</text> -->
+
+<!-- 使用自定义组件 只能小写、中划线、下划线 。可嵌套使用 多页面公共组件可在全局app.json中注册组件-->
+<!-- <my-cpn></my-cpn> -->
+
+<!-- 样式细节 使用class选择器有隔离效果-页面和组件之间的样式互不影响-->
+<!-- <my-style /> -->
+
+<!-- 自定义组件传递数据和样式 场景：页面自定义属性和样式显示-->
+<!-- <my-prop title="ok" />
+<my-prop title="样式" titleclass="red" /> -->
+
+<!-- 自定义事件传递数据 场景：通过自定义组件里的事件控制页面的数据-->
+<!-- <view>
+  当前计数：{{counter}}
+</view>
+<my-event bind:increment="handleIncrement"></my-event> -->
+
+<!-- tab-control -->
+<!-- <c-tab-control titles="{{['鞋子','衣服','裤子']}}" bind:itemClick="handleTabCLick"> -->
+
+<!-- 直接选中组件修改数据和调用方法 -->
+<!-- <button bindtap="handleSel">+</button>
+<my-sel id="sel-id"></my-sel> -->
+
+<!-- 插槽的使用 -->
+<my-slot>
+  <view slot="slot1">
+    one
+  </view>
+</my-slot>

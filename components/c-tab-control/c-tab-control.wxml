@@ -1,0 +1,11 @@
+<!-- 
+  bindtap="handleClick" data-index="{{index}}" 取得点击事件的index
+ -->
+
+<view class="tab-control">
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="tab-item {{currentIndex == index ? 'active':''}}" bindtap="handleClick" data-index="{{index}}">
+      <text class="tab-text">{{item}}</text>
+    </view>
+  </block>
+</view>

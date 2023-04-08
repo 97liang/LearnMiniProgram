@@ -1,0 +1,4 @@
+<view class="title titleclass" >{{title}}</view>
+<view>
+  我是组件内容
+</view>
