@@ -1,2 +1,16 @@
-<!--pages/home/home.wxml-->
-<text>Hello World</text>
+<!-- 页面跳转  
+open-type='navigateBack '关闭当前页面，返回上一页面或多级页面-->
+<navigator url="/pages/detail/detail">详情页(有返回按钮，但不允许跳转到tabbar页面)</navigator>
+
+<navigator url="/pages/detail/detail" open-type="redirect">详情页(无返回按钮)</navigator>
+
+<navigator url="/pages/about/about" open-type="switchTab">详情页(跳转到对应页面，关闭其他非tabbar页面)</navigator>
+
+<navigator url="/pages/detail/detail" open-type="reLaunch">详情页(关闭所有页面)</navigator>
+
+<!-- 转递数据 options 里获得首页数据-->
+<navigator url="/pages/detail/detail?name='liang'&age=19&height=1.88">详情页</navigator>
+<view>{{title}}</view>
+
+<!-- 4.通过代码进行页面跳转 -->
+<button size='mini' bind:tap="handlePushDetail">跳到详情页</button>

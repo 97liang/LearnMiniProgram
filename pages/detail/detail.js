@@ -1,25 +1,33 @@
-// pages/home/home.js
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title: 'hhahah'
-  },
-  handlePushDetail() {
-    wx.navigateTo({
-      url: '/pages/detail/detail?title=你好啊',
-    })
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    console.log(options);
   },
-
+  onUnload() {
+    console.log('退出');
+    const pages = getCurrentPages()
+    const home = pages[pages.length - 2]
+    console.log(home);
+    home.setData({
+      title: 'xxixi'
+    })
+  },
+  handleBackHome() {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -41,12 +49,7 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
 
-  },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
